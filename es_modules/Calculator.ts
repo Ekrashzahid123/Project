@@ -1,8 +1,10 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
+import gsap from "gsap";
+
 import Choice from "inquirer/lib/objects/choice.js";
 import prompt from "inquirer/lib/ui/prompt.js";
-console.log("Hello! I am Ekrash Calculator");
+console.log(chalk.bold.blue(`Welcome to the Ekrash Calculator`));
 
 const MainMenu = await inquirer.prompt([
   {
@@ -51,30 +53,30 @@ if (Arithmeticmenu.arthmeticop != chalk.bold.red("Back to  Menu")) {
   let result;
   if (Arithmeticmenu.arthmeticop == chalk.bold.green("Subtraction -")) {
     result = number.Number1 - number.Number2;
-    console.log(chalk.green(`The Answer For your Required Operation is as ${result}`));
+    console.log(
+      chalk.green(`The Answer For your Required Operation is as ${result}`)
+    );
   } else if (Arithmeticmenu.arthmeticop == chalk.bold.blue("Addition +")) {
     result = number.Number1 + number.Number2;
-    console.log(chalk.green(`The Answer For your Required Operation is as ${result}`));
+    console.log(
+      chalk.green(`The Answer For your Required Operation is as ${result}`)
+    );
   } else if (
     Arithmeticmenu.arthmeticop == chalk.bold.gray("Multiplication *")
   ) {
     result = number.Number1 * number.Number2;
-    console.log(chalk.green(`The Answer For your Required Operation is as ${result}`));
+    console.log(
+      chalk.green(`The Answer For your Required Operation is as ${result}`)
+    );
   } else if (Arithmeticmenu.arthmetiop == chalk.bold.white("Division /")) {
-    if(number.numer1==0)
-      {
-        console.log(chalk.bgRedBright('NO POSSIBLE'));
-      }
-    result=number.Number1/number.Number2;
-    console.log(chalk.green(`The Answer For your Required Operation is as ${result}`));
-
-  }
-
-    else 
-    {
-      console.log("Invalid Input");
+    if (number.numer1 == 0) {
+      console.log(chalk.bgRedBright("NO POSSIBLE"));
     }
+    result = number.Number1 / number.Number2;
+    console.log(
+      chalk.green(`The Answer For your Required Operation is as ${result}`)
+    );
+  } else {
+    console.log("Invalid Input");
+  }
 }
-
-
-

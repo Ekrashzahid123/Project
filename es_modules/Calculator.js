@@ -1,6 +1,6 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
-console.log("Hello! I am Ekrash Calculator");
+console.log(chalk.bold.blue(`Welcome to the Ekrash Calculator`));
 const MainMenu = await inquirer.prompt([
     {
         type: "list",
@@ -45,22 +45,22 @@ if (Arithmeticmenu.arthmeticop != chalk.bold.red("Back to  Menu")) {
     let result;
     if (Arithmeticmenu.arthmeticop == chalk.bold.green("Subtraction -")) {
         result = number.Number1 - number.Number2;
-        console.log(chalk.greenBright(`The Answer For your Required Operation is as ${result}`));
+        console.log(chalk.green(`The Answer For your Required Operation is as ${result}`));
     }
     else if (Arithmeticmenu.arthmeticop == chalk.bold.blue("Addition +")) {
         result = number.Number1 + number.Number2;
-        console.log(chalk.greenBright(`The Answer For your Required Operation is as ${result}`));
+        console.log(chalk.green(`The Answer For your Required Operation is as ${result}`));
     }
     else if (Arithmeticmenu.arthmeticop == chalk.bold.gray("Multiplication *")) {
         result = number.Number1 * number.Number2;
-        console.log(chalk.greenBright(`The Answer For your Required Operation is as ${result}`));
+        console.log(chalk.green(`The Answer For your Required Operation is as ${result}`));
     }
     else if (Arithmeticmenu.arthmetiop == chalk.bold.white("Division /")) {
         if (number.numer1 == 0) {
-            console.log(chalk.bgRedBright('NO POSSIBLE'));
+            console.log(chalk.bgRedBright("NO POSSIBLE"));
         }
         result = number.Number1 / number.Number2;
-        console.log(chalk.greenBright(`The Answer For your Required Operation is as ${result}`));
+        console.log(chalk.green(`The Answer For your Required Operation is as ${result}`));
     }
     else {
         console.log("Invalid Input");
